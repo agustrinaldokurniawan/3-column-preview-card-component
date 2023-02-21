@@ -1,0 +1,141 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --bg-card-1: hsl(31, 77%, 52%);
+  --bg-card-2: hsl(184, 100%, 22%);
+  --bg-card-3: hsl(179, 100%, 13%);
+
+  --color-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-main: hsl(0, 0%, 95%);
+
+  font-size: 15px;
+  --font-big-shoulder: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.service-card img {
+  width: 75px;
+  height: auto;
+}
+
+.service-card h1 {
+  font-family: var(--font-big-shoulder);
+  color: var(--color-main);
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+.service-card p {
+  color: var(--color-paragraph);
+  line-height: 1.7em;
+}
+
+.service-card:nth-child(1) {
+  background-color: var(--bg-card-1);
+  color: var(--bg-card-1);
+}
+
+.service-card:nth-child(2) {
+  background-color: var(--bg-card-2);
+  color: var(--bg-card-2);
+}
+
+.service-card:nth-child(3) {
+  background-color: var(--bg-card-3);
+  color: var(--bg-card-3);
+}
+
+.service-card button {
+  align-self: flex-start;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: inherit;
+  border: 2px solid var(--color-main);
+  background-color: var(--color-main);
+}
+
+.service-card button:hover {
+  background-color: inherit;
+  color: var(--color-main);
+  border: 2px solid var(--color-main);
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .service-card {
+    max-width: 210px;
+  }
+
+  .service-card button {
+    margin-top: 50px;
+  }
+
+  .service-card:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .service-card:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .service {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .service-card {
+    max-width: 225px;
+  }
+
+  .service-card:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .service-card:nth-child(3) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  footer {
+    margin-bottom: 30px;
+  }
+}
